@@ -3,13 +3,13 @@ import { Sun, Moon } from 'lucide-react';
 import Hero from './components/Hero';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    // Check local storage or system preference on mount
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
@@ -50,6 +50,7 @@ function App() {
         <Hero />
         <Experience />
         <Skills />
+        <Contact />
       </main>
       <Footer />
     </div>
